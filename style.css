@@ -4,47 +4,21 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}.container{
+    background-color: #E2E8F0;
+}
+h1{
+    color: #2D3748;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
     width: 70%;
     height: auto;
     background-color:#F7F5EB ;
     border-radius: 10px;
     padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-/* .error-msg{
-    font-weight: bold;
-    top:20px;
-    display: none;
-    margin-bottom: 10px;
-    width:400px;
-    text-align: center;
-    background-color:  #FED7D7;
-    color: #C53030;
-    padding: 10px;
-    border-radius: 7px;
-    position: relative;
-    overflow: hidden;
-}
-.error-msg::after{
-    content: "";
-    position: absolute;
-    width: 800px;
-    height: 100%;
-    background-color: #f09191;
-    left    :-100%;
-    top     :0;
-    border-radius:  7px;
-    opacity:0.5;
-    transform:translateX(100%);
-    transition: 3s;
-    animation: slideLeft 3s forwards;
-} 
-@keyframes slideLeft{
-    to{
-        left: 50%;
-    }
-} */
- .error-msg {
+.error-msg {
   display: none;
   position: relative;
   background: #ffe5e5;
@@ -62,7 +36,6 @@ body{
   animation: fadeInOut 3.5s ease forwards;
 }
 
-/* Decorative animated bar using ::before */
 .error-msg::before {
   content: "";
   position: absolute;
@@ -77,7 +50,6 @@ body{
   border-radius: 0 0 8px 8px;
 }
 
-/* Fade in and out animation */
 @keyframes fadeInOut {
   0%   { opacity: 0; transform: translateY(-10px); }
   10%  { opacity: 1; transform: translateY(0); }
@@ -85,7 +57,6 @@ body{
   100% { opacity: 0; transform: translateY(-10px); }
 }
 
-/* Progress bar animation */
 @keyframes progressBar {
   0% { transform: scaleX(0); }
   100% { transform: scaleX(1); }

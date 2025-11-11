@@ -115,9 +115,7 @@ function showError(message){
     errorMsg.innerHTML = message;
     errorMsg.style.display = 'block';
     loadingIndicator.style.display = 'none';
-    // setTimeout(() =>{
-    //     errorMsg.style.display = 'none';
-    // }, 3500);
+
 }
 function toggleComplete(isVisited, id){
     fetch(`${API_URL}/${id}`,{
