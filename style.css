@@ -1,0 +1,206 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}.container{
+    width: 70%;
+    height: auto;
+    background-color:#F7F5EB ;
+    border-radius: 10px;
+    padding: 20px;
+}
+/* .error-msg{
+    font-weight: bold;
+    top:20px;
+    display: none;
+    margin-bottom: 10px;
+    width:400px;
+    text-align: center;
+    background-color:  #FED7D7;
+    color: #C53030;
+    padding: 10px;
+    border-radius: 7px;
+    position: relative;
+    overflow: hidden;
+}
+.error-msg::after{
+    content: "";
+    position: absolute;
+    width: 800px;
+    height: 100%;
+    background-color: #f09191;
+    left    :-100%;
+    top     :0;
+    border-radius:  7px;
+    opacity:0.5;
+    transform:translateX(100%);
+    transition: 3s;
+    animation: slideLeft 3s forwards;
+} 
+@keyframes slideLeft{
+    to{
+        left: 50%;
+    }
+} */
+ .error-msg {
+  display: none;
+  position: relative;
+  background: #ffe5e5;
+  color: #a10000;
+  border-left: 4px solid #ff4d4d;
+  padding: 12px 18px;
+  border-radius: 8px;
+  width: fit-content;
+  margin: 16px auto;
+  font-weight: 500;
+  font-family: system-ui, sans-serif;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeInOut 3.5s ease forwards;
+}
+
+/* Decorative animated bar using ::before */
+.error-msg::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, #ff4d4d, #ff9a9a);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: progressBar 3s linear forwards;
+  border-radius: 0 0 8px 8px;
+}
+
+/* Fade in and out animation */
+@keyframes fadeInOut {
+  0%   { opacity: 0; transform: translateY(-10px); }
+  10%  { opacity: 1; transform: translateY(0); }
+  80%  { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+/* Progress bar animation */
+@keyframes progressBar {
+  0% { transform: scaleX(0); }
+  100% { transform: scaleX(1); }
+}
+
+.form-group{
+    display: flex;
+    flex-direction: row;
+    flex-wrap   : wrap;
+    justify-content: space-between;
+    gap :10px;
+
+}
+#destination{
+    flex: 1;
+    outline : none;
+    border-radius: 7px;
+    outline : none;
+    border-radius: 7px;
+    border  : 1px solid #48BB78;
+    height: 50px;
+    font-size: 20px;
+}
+#destination:focus{
+    border  : 2px solid #48BB78;
+}
+#add{
+    width:100px;
+    height  :53px;
+    background-color: #E46C08;
+    outline : none;
+    border-radius: 7px;
+    border  : none;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+
+}
+#add:hover{
+    background-color: #C45507;
+    cursor: pointer;
+    transform: translateY(-2px);
+    transition: all 0.3s;
+}
+
+@media  (max-width: 768px){
+    .container{
+        width: 90%;
+        margin:0px 20px;
+    }
+}
+.update-group{
+    gap: 10px;
+    flex-basis:100%;
+}
+#update{
+    display: none;
+    width:100px;
+    height  :45px;
+    background-color: #48BB78;
+    outline : none;
+    border-radius: 7px;
+    border  : none;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+}
+#cancel{
+    display: none;
+    width:100px;
+    height  :45px;
+    background-color: #CBD5E0;
+    outline : none;
+    border-radius: 7px;
+    border  : none;
+    color: #2D3748;
+    font-weight: bold;
+    font-size: 17px;
+}
+.loading{
+    text-align: center;
+    font-size: 20px;
+    display: none;
+}
+.travel-list{
+    margin-top: 20px;
+    list-style-type: none;
+    padding: 0px;
+
+}
+.travel-list li{
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.travel-list li:hover{
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
+    transition: all 0.3s;
+}
+.controls {
+    display: flex;
+    gap: 10px;
+
+}
+.controls button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}

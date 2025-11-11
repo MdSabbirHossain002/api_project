@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Planer 🛫</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <span class="error-msg">🛫</span>
+    <h1>Welcome to Travel Planer 🛫</h1>
+    <div class="container">
+        <div class="form-group">
+            <input type="text" id="destination" placeholder="Enter your destination">
+            <button id="add" >Add</button>
+            <div class="update-group">
+                <button id="update">Update</button>
+                <button id="cancel">Cancel</button>
+            </div>
+        </div>
+        <hr>
+        <div class="loading">Loading...</div>
+        <ul class="travel-list">
+            <li>
+                <span class="destination-name">Paris</span>
+                <div class="controls">
+                    <button class="visited"><img src="unchecked.png" alt="unchecked"></button>
+                    <button class="edit"><img src="edit.png" alt="edit"></button>
+                    <button class="delete"><img src="delete.png" alt="delete">
+                    </button>
+                </div>
+            </li>
+            <li>
+                <span class="destination-name">Paris</span>
+                <div class="controls">
+                    <button class="visited"><img src="unchecked.png" alt="unchecked"></button>
+                    <button class="edit"><img src="edit.png" alt="edit"></button>
+                    <button class="delete"><img src="delete.png" alt="delete">
+                    </button>
+                </div>
+            </li>
+        </ul>
+    </div>
+<script src="main.js"></script>
+</body>
+</html>
